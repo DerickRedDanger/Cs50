@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>My homepage!</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .card-title-1{
+        color:rgba(139,69,19,1)
+      }
+      .card-title-2{
+        color:rgba(255,0,0,1)
+      }
+      .card-title-3{
+        color:rgba(255,255,0,.75)
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+        #surprise{
+          display: none;
+        }
+        #surprise1{
+          display: none;
+        }
+
+        .cat{
+        color:rgba(139,69,19,1);
+        }
+        .cat:hover{
+        text-decoration: underline;
+        }
+
+        #cat{
+        display: none;
+        color:rgba(139,69,19,1);
+        }
+
+        #cat1{
+        display: none;
+        color:rgba(139,69,19,1);
+        transform: translate(-87px,57px)
+        }
+
+        .vs{
+        color:rgba(255,0,0,1);
+        }
+        .vs:hover{
+        text-decoration: underline;
+        }
+        #vs{
+        display: none;
+        color:rgba(255,0,0,1);
+        }
+
+        .dog{
+        color:rgba(255,255,0,1)
+
+        }
+        .dog:hover{
+        text-decoration: underline;
+        }
+
+        #dog{
+        display: none;
+        color:rgba(255,255,0,1);
+
+        }
+        #dog1{
+        display: none;
+        color:rgba(255,255,0,1);
+        transform: translate(75px,0px)
+        }
+    </style>
+
+<script>
+    function surprise() {
+      document.getElementById("surprise").style.display = "block";
+      document.getElementById("surprise1").style.display = "block";
+      document.getElementById("page").innerHTML = "";
+      document.getElementById("page").style.display = "none"
+      document.getElementById("hello").innerHTML = "Hello Cs50 and welcome to my page!";
+      document.getElementById("tip").innerHTML = "Pro tip: if it changes on hover, click it.";
+    }
+
+   function cat() {
+                document.getElementById("cat").style.display = "block";
+                document.getElementById("vs").style.display = "none";
+                document.getElementById("dog").style.display = "none";
+                document.getElementById("cat1").style.display = "block";
+                document.getElementById("dog1").style.display = "none";
+                }
+                function vs() {
+                document.getElementById("vs").style.display = "block";
+                document.getElementById("cat").style.display = "none";
+                document.getElementById("dog").style.display = "none";
+                document.getElementById("cat1").style.display = "none";
+                document.getElementById("dog1").style.display = "none";
+
+                }
+                function dog() {
+                document.getElementById("dog").style.display = "block";
+                document.getElementById("vs").style.display = "none";
+                document.getElementById("cat").style.display = "none";
+                document.getElementById("cat1").style.display = "none";
+                document.getElementById("dog1").style.display = "block";
+                }
+
+</script>
+
+
+    <!-- Custom styles for this template -->
+    <link href="index/index.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 id="hello" class="text-center mb-0">Hello Cs50 and welcome to my</h3>
+      <a id="page" class="btn btn-lg btn-secondary fw-bold border-white bg-white" onclick="surprise()"> Page! </a>
+      <h5 id="tip"></h5>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3">
+
+
+    <div id="surprise" class="card bg-dark text-white">
+      <img src="index/cats-vs-dogs.jpg" class="card-img" alt="Cat Vs Dog">
+      <div class="card-img-overlay">
+        <h1 class="cat cat1 card-title-1" onclick="cat()">Cat</h1>
+        <h5 id="cat">Cats are da meowest!</h5>
+        <h1 class="vs card-title-2" onclick="vs()">Vs</h1>
+        <h5 id="vs">Who is going to win this Fight ?</h5>
+        <h1 class="dog card-title-3" onclick="dog()">Dog</h1>
+        <h5 id="dog">No one beats de woofs!</h5>
+        <h3 id="dog1" class="card-text">Woof!</h3>
+        <h3 id="cat1" class="card-text">Meow!</h3>
+
+      </div>
+    </div>
+    <div id="surprise1">
+    <h2> Who is the best ? </h2>
+    <p class="lead"></p>
+    <p class="lead">
+      <a href="vs.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white"> Let's find out !</a>
+    </p>
+  </div>
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p>Page adapted and customized from <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, original author: <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+  </footer>
+</div>
+
+
+
+  </body>
+</html>

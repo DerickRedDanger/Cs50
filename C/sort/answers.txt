@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: it took 1/5 of the normal time on the sorted list
+
+sort2 uses: merge sort
+
+How do you know?: it's time was by far the shortest
+
+sort3 uses: Selection sort
+
+How do you know?: it's sort time was pretty much the same on all options

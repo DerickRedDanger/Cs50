@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<div class="section">
+        <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ price | usd }}</td>
+                <td>{{ symbol }}</td>
+            </tr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cash</th>
+                        <th>Total price</th>
+                        <th>New balance</th>
+                    </tr>
+                </thead>
+            <tr>
+                <td>{{ cash | usd }}</td>
+                <td> + {{ total_price | usd }}</td>
+                <td>{{ newbalance | usd }}</td>
+            </tr>
+        </tbody>
+    </table>
+</table>
+</div>
+{% endblock %}

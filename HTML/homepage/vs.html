@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Cat Vs Dog!</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+<script>
+  function hide1() {
+    document.getElementById("hide11").style.display = "none";
+    document.getElementById("hide12").style.display = "none";
+    document.getElementById("hide13").style.display = "none";
+    document.getElementById("hide2").style.display = "block";
+    document.getElementById("image1").style.display = "none";
+  }
+
+  function hide2() {
+    document.getElementById("hide2").style.display = "none";
+    document.getElementById("hide31").style.display = "block";
+    document.getElementById("hide3").style.display = "block";
+    document.getElementById("hide32").style.display = "block";
+
+  }
+
+  function hide3() {
+    document.getElementById("hide3").style.display = "none";
+    document.getElementById("hide31").style.display = "none";
+    document.getElementById("hide32").style.display = "none";
+    document.getElementById("myCarousel").style.display = "block";
+    document.getElementById("image1").style.display = "none";
+  }
+
+  function yes() {
+    document.getElementById("myCarousel").style.display = "none";
+    document.getElementById("decision").style.display = "block";
+  }
+
+</script>
+
+    <!-- Custom styles for this template -->
+    <link href="Vs/vs.css" rel="stylesheet">
+  </head>
+  <body class="bg-dark">
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">Back to index!</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./Cats.html" hover="dontdothis()">Spoil 1</a>
+            <ul><li>
+              <h4 class="dont"> Don't touch it!</h4>
+            </li></ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./dogs.html">Spoil 2</a>
+            <ul><li>
+              <h4 class="dont"> Noooooooooo!</h4>
+            </li></ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+            <ul><li>
+              <h4 class="nop"> Nooooooooop</h4>
+            </li></ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div id="image1" class="hero-image img-fluid">
+    <div class="hero-text">
+      <h3 id="hide11">As you know, there have always been a discussion about who is the best pet. Cat or dog?</h3>
+      <h3 id="hide12">And their usual antipathy for one another...</h3>
+      <button id="hide13" onclick="hide1()">Continue</button>
+    </div>
+  </div>
+
+  <div class="hero-image0" id="hide2">
+    <div class="hero-text0">
+      <h3>Of course, there are also plenty of them that get along really well!</h1>
+
+      <button onclick="hide2()"> Continue </button>
+    </div>
+  </div>
+
+  <div id="hide3" class="hero-image1">
+    <div class="hero-text0">
+      <h3 id="hide32">But for the sake of the fun,<p> we will stick to comparing who is the best pet!</p> </h3>
+      <button id="hide31" onclick="hide3()"> Here we go! </button>
+    </div>
+  </div>
+
+  <div id="myCarousel" class="carstart carousel slide " data-bs-interval="15000" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
+
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <div class="img-overlay">
+            <img src="Vs/cats-vs-dogs-3.jpg" alt="Cat Vs Dog">
+            <h2>Dogs always give us a warm welcome!</h2>
+            <p class="dog">My Owner is back!</p>
+
+            <!--p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p-->
+
+        </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <img src="Vs/cats-vs-dogs-4.jpg" alt="Cat Vs Dog">
+            <h2>Cats don't care whether we leave or arrive</h2>
+            <p class="cat">hum ? the human wasn't home?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <img src="Vs/cats-vs-dogs-5.jpg" alt="Cat Vs Dog">
+            <h2>Dogs love anything we give them</h2>
+            <p class="dog">Oh, a bone! my owner loves me so much!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <h2><img src="Vs/cats-vs-dogs-6.jpg" alt="Cat Vs Dog">
+            Nothing is ever good enough for cats</h2>
+            <p class="cat">Meh, you gotta do better than that to please me</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+           <img src="Vs/cats-vs-dogs-7.jpg" alt="Cat Vs Dog">
+           <h2>Dogs respectfully sleeps on the ground</h2>
+            <p class="dog">I want to sleep with owner, but he said i can't sleep on the bed...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <img src="Vs/cats-vs-dogs-8.jpg" alt="Cat Vs Dog">
+            <h2>The only places cats sleep is in our bed</h2>
+            <p class="cat">Yes human, scratch me right there, yes...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <img src="Vs/cats-vs-dogs-9.jpg" alt="Cat Vs Dog">
+            <h2>Dogs feel guilty when they do something wrong</h2>
+            <p class="dog">Sorry... I just wanted something to play with while you were gone...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <img src="Vs/cats-vs-dogs-10.jpg" alt="Cat Vs Dog">
+            <h2>Cats never do anything wrong</h2>
+            <p class="cat">Human, my scratch toy is broken, fix it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <img src="Vs/cats-vs-dogs-11.jpg" alt="Cat Vs Dog">
+            <h2> Dogs love and worships us</h2>
+            <p class="dog">The owner is the best! I love him so much!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <img src="Vs/cats-vs-dogs-12.jpg" alt="Cat Vs Dog">
+            <h2> Cats want to be worshiped by us</h2>
+            <p class="cat">Craw and knee just like that. Good human.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-center">
+            <img src="Vs/cat and dog split 2.jpg" alt="Cat Vs Dog">
+            <h1>So, are you ready to decide on whose side are you on?</h1>
+            <p> </p>
+            <p><a class="btn btn-lg btn-primary" onclick="yes()"> Yes! </a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div id="decision">
+    <div>
+    <div class="container">
+      <h1>Pick your side and receive your reward</h1>
+      <img src="Cats/cats.jpg"  alt="Avatar" class="image" style="width:90%">
+      <h1>VS</h1>
+      <div class="middle">
+        <div> <a class="btn btn-lg btn-primary textcat" href="./Cats.html"> worhship me. </a> </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="container">
+      <img src="Dogs/dog.png" alt="Avatar" class="image" style="width:90%">
+      <div class="middle">
+        <div> <a class="btn btn-lg btn-primary textdog" href="./dogs.html">Am I a good boy? </a> </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto text-white-50 container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>Original cat vs dog from <A href="https://www.boredpanda.com/">Boredpanda </p>
+  </footer>
+</main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  </body>
+</html>

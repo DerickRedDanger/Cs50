@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<div class="section">
+        <table>
+        <thead>
+            <tr>
+                <th>Type of transaction</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price paid</th>
+                <th>Total worth</th>
+                <th>Time of transaction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for table in table %}
+            <tr>
+                <td>{{ table.type }}</td>
+                <td>{{ table.symbol }}</td>
+                <td>{{ table.shares | usd }}</td>
+                <td>{{ table.Price | usd }}</td>
+                <td>{{ table.total | usd }}</td>
+                <td>{{ table.timeOftransaction }}</td>
+            </tr>
+            {% endfor %}
+</table>
+</div>
+{% endblock %}

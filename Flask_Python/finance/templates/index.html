@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<div class="section">
+        <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Average paid/share</th>
+                <th>Total paid</th>
+                <th>Latest share price</th>
+                <th>Total worth</th>
+                <th>Difference</th>
+                <th>Percentage (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for table in table %}
+            <tr>
+                <td>{{ table.symbol }}</td>
+                <td>{{ table.shares }}</td>
+                <td>{{ table.averange_price | usd }}</td>
+                <td>{{ table.total | usd }}</td>
+                <td>{{ table.latest_price | usd }}</td>
+                <td>{{ table.total_worth | usd }}</td>
+                <td>{{ table.difference | usd }}</td>
+                <td>{{ table.percentage }}</td>
+            </tr>
+            {% endfor %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cash balance</th>
+                        <th>Total shares balance</th>
+                        <th>Grand total</th>
+                    </tr>
+                </thead>
+            <tr>
+                <td>{{ cash | usd  }}</td>
+                <td> + {{ total | usd }}</td>
+                <td>{{ balance | usd  }}</td>
+            </tr>
+        </tbody>
+    </table>
+</table>
+
+<form action="/sell" method="post">
+    <div class="mb-3">
+        <label for="symbol">Sell some of your shares?</label>
+
+<select name="symbol" id="symbol">
+
+{% for table in table %}
+
+<p><option value="{{ table.symbol }}"> {{ table.symbol }}</option></p>
+
+{% endfor %}
+</select>
+
+    </div>
+    <div class="mb-3">
+        Insert number of shares
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="shares" type="number">
+    </div>
+    <button class="btn btn-primary" type="submit">Sell</button>
+</form>
+
+<form action="/buy" method="post">
+    <div class="mb-3">
+        <label for="symbol">Buy more shares?</label>
+
+<select name="symbol" id="symbol">
+
+{% for table in table %}
+
+<p><option value="{{ table.symbol }}"> {{ table.symbol }}</option></p>
+
+{% endfor %}
+</select>
+
+    </div>
+    <div class="mb-3">
+        Insert number of shares
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="shares" type="number">
+    </div>
+    <button class="btn btn-primary" type="submit">Buy</button>
+</form>
+
+</div>
+{% endblock %}

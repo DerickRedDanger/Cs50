@@ -1,0 +1,1 @@
+select name from people join stars join movies on movies.id = stars.movie_id AND people.id = stars.person_id where movies.title = "Toy Story";

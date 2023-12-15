@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<div class="section">
+    A share of {{ quote["name"] }} ({{ quote["symbol"] }}) is {{ quote["price"] }}
+    <form action="/login" method="post">
+        <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ quote["name"] }}</td>
+                <td>{{ quote["price"] | usd }}</td>
+                <td>{{ quote["symbol"] }}</td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+</div>
+{% endblock %}
